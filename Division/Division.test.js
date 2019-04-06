@@ -18,3 +18,6 @@ test("All arguments not number", () => {
 test("All arguments not number", () => {
   expect(divide("9g", "6t")).toBe("All Parameters should be number");
 });
+test("divide 0 / 4 to equals 0", () => {
+  expect(divide(0, 4)).toBe(0);
+});
