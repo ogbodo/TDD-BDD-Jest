@@ -11,3 +11,9 @@ test("One Empty argument ", () => {
 test("both arguments are numbers", () => {
   expect(str(2, 4)).toBe("All Parameters should be string");
 });
+test("one argument is string and the other number", () => {
+  expect(str(2, "4")).toBe("All Parameters should be string");
+});
+test("More arguments than expected", () => {
+  expect(str("food ", "is ", "ready")).toBe("More arguments than expected");
+});
