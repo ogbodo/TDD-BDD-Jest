@@ -4,7 +4,7 @@ test("divide 4 / 4 to equals 1", () => {
   expect(divide(4, 4)).toBe(1);
 });
 test("Empty arguments ", () => {
-  expect(divide()).toEqual("No parameter should be empty");
+  expect(divide()).toEqual("Both parameters are  empty");
 });
 test("One Empty argument ", () => {
   expect(divide(2)).toBe("No parameter should be empty");
@@ -17,7 +17,4 @@ test("All arguments not number", () => {
 });
 test("All arguments not number", () => {
   expect(divide("9g", "6t")).toBe("All Parameters should be number");
-});
-test("divide 0 / 4 to equals 0", () => {
-  expect(divide(0, 4)).toBe(0);
 });

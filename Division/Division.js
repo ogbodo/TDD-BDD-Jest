@@ -1,7 +1,11 @@
 module.exports = function(a, b) {
-  if (!(a && b)) {
+  if (!a && !b) {
+    return "Both parameters are  empty";
+  }
+  if (!a || !b) {
     return "No parameter should be empty";
   }
+
   if (typeof a !== "number" || typeof b !== "number") {
     return "All Parameters should be number";
   }
