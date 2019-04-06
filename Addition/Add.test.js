@@ -20,3 +20,6 @@ test("All arguments not number", () => {
 test("All arguments not number", () => {
   expect(add("9g", "6t")).toBe("All Parameters should be number");
 });
+test("All arguments not number", () => {
+  expect(add(function() {}, [])).toBe("All Parameters should be number");
+});

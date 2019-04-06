@@ -7,5 +7,17 @@ test("Empty arguments ", () => {
   expect(multiply()).toEqual("No parameter should be empty");
 });
 test("One Empty argument ", () => {
-  expect(add(2)).toBe("No parameter should be empty");
+  expect(multiply(2)).toBe("No parameter should be empty");
+});
+test("One argument not number", () => {
+  expect(multiply([], 2)).toBe("All Parameters should be number");
+});
+test("All arguments not number", () => {
+  expect(multiply({}, [])).toBe("All Parameters should be number");
+});
+test("All arguments not number", () => {
+  expect(multiply("9g", "6t")).toBe("All Parameters should be number");
+});
+test("More arguments than expected", () => {
+  expect(multiply(8, 4, 5)).toBe("More arguments than expected");
 });
