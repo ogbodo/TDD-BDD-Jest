@@ -27,3 +27,6 @@ test("divide 4 / 0 to return denominator cannot be zero", () => {
 test("the case of null arguments", () => {
   expect(divide(null, 5)).toBe("All Parameters should be number");
 });
+test("divide 0 / 0 to return denominator cannot be zero", () => {
+  expect(divide(0, 0)).toBe("Denominator cannot be zero");
+});
