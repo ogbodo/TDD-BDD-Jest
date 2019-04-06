@@ -9,7 +9,7 @@ module.exports = function(a, b) {
     if (a == 0) {
       return a / b;
     } else {
-      return "First parameter should not be null";
+      return "Denominator cannot be zero";
     }
   }
 
