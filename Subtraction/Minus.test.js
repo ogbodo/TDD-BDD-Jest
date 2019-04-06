@@ -20,3 +20,6 @@ test("All arguments not number", () => {
 test("All arguments not number", () => {
   expect(minus(function() {}, [])).toBe("All Parameters should be number");
 });
+test("More arguments than expected", () => {
+  expect(minus(8, 4, 5)).toBe("More arguments than expected");
+});
