@@ -14,3 +14,9 @@ test("One Empty argument ", () => {
 test("One argument not number", () => {
   expect(add([], 2)).toBe("All Parameters should be number");
 });
+test("All arguments not number", () => {
+  expect(add({}, [])).toBe("All Parameters should be number");
+});
+test("All arguments not number", () => {
+  expect(add("9g", "6t")).toBe("All Parameters should be number");
+});
