@@ -1,5 +1,10 @@
 module.exports = function(a, b) {
   if (!a && !b) {
+    if (a == 0 || b == 0) {
+      if (b == 0) {
+        return "Denominator cannot be zero";
+      }
+    }
     return "No parameter should be empty";
   }
   if (!a || !b) {
