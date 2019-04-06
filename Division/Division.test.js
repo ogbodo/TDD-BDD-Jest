@@ -30,3 +30,6 @@ test("the case of null arguments", () => {
 test("divide 0 / 0 to return denominator cannot be zero", () => {
   expect(divide(0, 0)).toBe("Denominator cannot be zero");
 });
+test("More arguments than expected", () => {
+  expect(divide(8, 4, 5)).toBe("More arguments than expected");
+});
