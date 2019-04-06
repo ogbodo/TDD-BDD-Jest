@@ -1,4 +1,7 @@
 module.exports = function(a, b) {
+  if (arguments.length > 2) {
+    return "More arguments than expected";
+  }
   if (!a && !b) {
     return "No parameter should be empty";
   }
