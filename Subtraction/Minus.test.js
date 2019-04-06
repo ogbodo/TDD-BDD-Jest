@@ -5,3 +5,6 @@ test("minus 4 - 2 to equals 2", () => {
 test("Empty arguments ", () => {
   expect(minus()).toEqual("No parameter should be empty");
 });
+test("One Empty argument ", () => {
+  expect(minus(2)).toBe("All Parameters should be number");
+});
