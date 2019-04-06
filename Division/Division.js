@@ -1,9 +1,16 @@
 module.exports = function(a, b) {
   if (!a && !b) {
-    return "Both parameters are  empty";
+    return "No parameter should be empty";
   }
   if (!a || !b) {
-    return "No parameter should be empty";
+    if (typeof b == "undefined") {
+      return "Second parameter should not be empty";
+    }
+    if (a == 0) {
+      return a / b;
+    } else {
+      return "First parameter should not be null";
+    }
   }
 
   if (typeof a !== "number" || typeof b !== "number") {
