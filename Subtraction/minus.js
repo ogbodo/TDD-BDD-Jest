@@ -7,5 +7,8 @@ module.exports = function(a, b) {
       return "All Parameters should be number";
     }
   }
+  if (typeof a !== "number" || typeof b !== "number") {
+    return "All Parameters should be number";
+  }
   return a - b;
 };
