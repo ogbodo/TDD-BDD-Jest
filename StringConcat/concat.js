@@ -4,8 +4,11 @@ module.exports = function(str1, str2) {
   }
   if (!str1 || !str2) {
     if (typeof str1 !== "string" || typeof str2 !== "string") {
-      return "All Parameters should be number";
+      return "All Parameters should be string";
     }
+  }
+  if (typeof str1 !== "string" || typeof str2 !== "string") {
+    return "All Parameters should be string";
   }
   return str1 + str2;
 };
