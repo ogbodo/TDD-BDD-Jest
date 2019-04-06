@@ -8,3 +8,6 @@ test("Empty arguments ", () => {
 test("One Empty argument ", () => {
   expect(str("Izu")).toBe("All Parameters should be number");
 });
+test("both arguments are numbers", () => {
+  expect(str(2, 4)).toBe("All Parameters should be number");
+});
