@@ -8,7 +8,9 @@ module.exports = function() {
       multiply *= multiplyArrayValues(arguments[i]);
     } else if (typeof arguments[i] === "object" && arguments[i] !== null) {
       multiply *= MultiplyObjectValues(arguments[i]);
-    } else multiply *= arguments[i];
+    } else if (arguments[i] !== null) {
+      multiply *= arguments[i];
+    }
   }
   return multiply;
 };
