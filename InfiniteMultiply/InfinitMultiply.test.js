@@ -14,3 +14,12 @@ test("One argument is array of number", () => {
 test("One argument is empty array", () => {
   expect(indefiniteMultiply([], 2, 4, 8, 1)).toBe(64);
 });
+test("One argument is multidimensional array", () => {
+  expect(indefiniteMultiply([1, 1, [2, 1, 1]], 2, 4, 8, 1)).toBe(128);
+  expect(indefiniteMultiply([2, 1, [2, 1, [1, [3, 1, 1]]]], 2, 2, 2, 1)).toBe(
+    96
+  );
+  expect(
+    indefiniteMultiply([1, [1, [1, 2, 1]], [2, 1, [1, [1, 2, 1]]]], 2, 1, 1, 1)
+  ).toBe(16);
+});
