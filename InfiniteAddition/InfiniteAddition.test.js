@@ -23,4 +23,8 @@ test("One argument is multidimensional array", () => {
 });
 test("One argument is an object", () => {
   expect(indefiniteAdd({}, 2, 4, 9, 0)).toBe(15);
+  expect(indefiniteAdd({ "1": 1, "2": 2 }, 2, 4, 9, 0)).toBe(18);
+});
+test("One argument is null", () => {
+  expect(indefiniteAdd(null, 2, 4, 9, 0)).toBe(15);
 });

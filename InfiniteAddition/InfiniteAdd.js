@@ -8,7 +8,7 @@ module.exports = function() {
       sum += sumArrayValues(arguments[i]);
     } else if (typeof arguments[i] === "object" && arguments[i] !== null) {
       for (var index in arguments[i]) {
-        sum += arguments[index];
+        sum += arguments[i][index];
       }
     } else {
       sum += arguments[i];
