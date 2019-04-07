@@ -24,7 +24,7 @@ function multiplyArrayValues(arr) {
       multiply *= multiplyArrayValues(arr[i]);
     } else if (typeof arr[i] === "object" && arr[i] !== null) {
       multiply *= MultiplyObjectValues(arr[i]);
-    } else {
+    } else if (arr[i] !== null) {
       multiply *= arr[i];
     }
   }
@@ -37,7 +37,7 @@ function MultiplyObjectValues(obj) {
       multiply *= multiplyArrayValues(obj[index]);
     } else if (typeof obj[index] === "object" && obj[index] !== null) {
       multiply *= MultiplyObjectValues(obj[index]);
-    } else {
+    } else if (obj[index] !== null) {
       multiply *= obj[index];
     }
   }
