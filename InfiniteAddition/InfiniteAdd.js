@@ -19,6 +19,8 @@ function sumArrayValues(arr) {
   for (var i = 0; i < arr.length; i++) {
     if (isArray(arr[i])) {
       sum += sumArrayValues(arr[i]);
+    } else if (typeof arr[i] === "object" && arr[i] !== null) {
+      sum += sumObjectValues(arr[i]);
     } else {
       sum += arr[i];
     }
