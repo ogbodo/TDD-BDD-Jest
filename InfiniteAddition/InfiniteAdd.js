@@ -4,13 +4,25 @@ module.exports = function() {
   }
   var sum = 0;
   for (var i = 0; i < arguments.length; i++) {
-    if (arguments[i] instanceof Array) {
-      for (var j = 0; j < arguments[i].length; j++) {
-        sum += arguments[i][j];
-      }
+    if (isArray(arguments[i])) {
+      sum += sumArrayValues(arguments[i]);
     } else {
       sum += arguments[i];
     }
   }
   return sum;
 };
+function sumArrayValues(arr) {
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    if (isArray(arr[i])) {
+      sum += sumArrayValues(arr[i]);
+    } else {
+      sum += arr[i];
+    }
+  }
+  return sum;
+}
+function isArray(value) {
+  return value instanceof Array;
+}
