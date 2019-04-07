@@ -29,3 +29,8 @@ test("One argument is an object", () => {
 test("One argument is null", () => {
   expect(indefiniteMultiply(null, 2, 4, 8, 1)).toBe(64);
 });
+test("One argument is an object with array as a property", () => {
+  expect(indefiniteMultiply({ "1": 1, "2": 2, array: [] }, 2, 4, 8, 1)).toBe(
+    128
+  );
+});

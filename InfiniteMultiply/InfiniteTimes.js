@@ -34,9 +34,9 @@ function MultiplyObjectValues(obj) {
   var multiply = 1;
   for (var index in obj) {
     if (isArray(obj[index])) {
-      multiply *= sumArrayValues(obj[index]);
+      multiply *= multiplyArrayValues(obj[index]);
     } else if (typeof obj[index] === "object" && obj[index] !== null) {
-      multiply *= sumObjectValues(obj[index]);
+      multiply *= MultiplyObjectValues(obj[index]);
     } else {
       multiply *= obj[index];
     }
