@@ -23,3 +23,6 @@ test("One argument is multidimensional array", () => {
     indefiniteMultiply([1, [1, [1, 2, 1]], [2, 1, [1, [1, 2, 1]]]], 2, 1, 1, 1)
   ).toBe(16);
 });
+test("One argument is an object", () => {
+  expect(indefiniteMultiply({}, 2, 4, 8, 0)).toBe(64);
+});
