@@ -35,4 +35,27 @@ test("One argument is an object with array as a property having object as an ele
   expect(
     indefiniteAdd({ "1": 1, "2": 2, array: [{ one: 1, two: 2 }] }, 2, 4, 9, 0)
   ).toBe(21);
+  expect(
+    indefiniteAdd(
+      { "1": 1, "2": 2, array: [{ one: 1, two: 2, array: [] }] },
+      2,
+      4,
+      9,
+      0
+    )
+  ).toBe(21);
+  expect(
+    indefiniteAdd(
+      {
+        "1": 1,
+        "2": 2,
+        array: [{ one: 1, null: null, two: 2, array: [1, 2, null, 3] }]
+      },
+      2,
+      4,
+      9,
+      0,
+      null
+    )
+  ).toBe(27);
 });
