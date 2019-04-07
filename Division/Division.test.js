@@ -33,7 +33,7 @@ test("divide 0 / 0 to return denominator cannot be zero ", () => {
 test("More arguments than expected", () => {
   expect(divide(8, 4, 5)).toBe("More arguments than expected");
 });
-test("divide 0.5 / 3 to be close to 0.1667", () => {
+test("case of fractional numbers", () => {
   expect(divide(0.5, 3)).toBeCloseTo(0.1667);
   expect(divide(0.12, 0.13)).toBeCloseTo(0.923);
 });
