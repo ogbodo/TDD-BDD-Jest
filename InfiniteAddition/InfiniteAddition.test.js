@@ -16,4 +16,8 @@ test("One argument is empty array", () => {
 });
 test("One argument is multidimensional array", () => {
   expect(indefiniteAdd([2, 3, [2, 4, 1]], 2, 4, 9, 0)).toBe(27);
+  expect(indefiniteAdd([2, 3, [2, 4, [1, [3, 4, 5]]]], 2, 4, 9, 0)).toBe(39);
+  expect(
+    indefiniteAdd([2, [3, [1, 4, 50]], [2, 4, [1, [3, 4, 5]]]], 2, 4, 9, 0)
+  ).toBe(94);
 });
