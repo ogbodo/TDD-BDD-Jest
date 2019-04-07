@@ -26,3 +26,6 @@ test("One argument is multidimensional array", () => {
 test("One argument is an object", () => {
   expect(indefiniteMultiply({}, 2, 4, 8, 1)).toBe(64);
 });
+test("One argument is null", () => {
+  expect(indefiniteMultiply(null, 2, 4, 8, 1)).toBe(64);
+});
