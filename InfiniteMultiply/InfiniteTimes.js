@@ -17,9 +17,7 @@ function multiplyArrayValues(arr) {
   var multiply = 1;
   for (var i = 0; i < arr.length; i++) {
     if (isArray(arr[i])) {
-      multiply *= sumArrayValues(arr[i]);
-    } else if (typeof arr[i] === "object" && arr[i] !== null) {
-      multiply *= sumObjectValues(arr[i]);
+      multiply *= multiplyArrayValues(arr[i]);
     } else {
       multiply *= arr[i];
     }
