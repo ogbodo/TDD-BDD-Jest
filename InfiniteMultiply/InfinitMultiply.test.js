@@ -34,3 +34,38 @@ test("One argument is an object with array as a property", () => {
     128
   );
 });
+
+test("One argument is an object with array as a property having object as an element", () => {
+  expect(
+    indefiniteMultiply(
+      { "1": 1, "2": 2, array: [{ one: 1, two: 2 }] },
+      2,
+      4,
+      8,
+      1
+    )
+  ).toBe(256);
+  expect(
+    indefiniteMultiply(
+      { "1": 1, "2": 2, array: [{ one: 1, two: 2, array: [] }] },
+      2,
+      4,
+      8,
+      1
+    )
+  ).toBe(256);
+  expect(
+    indefiniteMultiply(
+      {
+        "1": 1,
+        "2": 2,
+        array: [{ one: 1, null: null, two: 2, array: [1, 2, null, 3] }]
+      },
+      2,
+      4,
+      8,
+      1,
+      null
+    )
+  ).toBe(27);
+});
