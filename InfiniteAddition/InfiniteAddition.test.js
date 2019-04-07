@@ -31,3 +31,8 @@ test("One argument is null", () => {
 test("One argument is an object with array as a property", () => {
   expect(indefiniteAdd({ "1": 1, "2": 2, array: [] }, 2, 4, 9, 0)).toBe(18);
 });
+test("One argument is an object with array as a property having object as an element", () => {
+  expect(
+    indefiniteAdd({ "1": 1, "2": 2, array: [{ one: 1, two: 2 }] }, 2, 4, 9, 0)
+  ).toBe(21);
+});
