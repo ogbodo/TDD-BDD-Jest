@@ -4,7 +4,13 @@ module.exports = function() {
   }
   var sum = 0;
   for (var i = 0; i < arguments.length; i++) {
-    sum += arguments[i];
+    if (arguments[i] instanceof Array) {
+      for (var j = 0; j < arguments[i].length; j++) {
+        sum += arguments[i][j];
+      }
+    } else {
+      sum += arguments[i];
+    }
   }
   return sum;
 };
