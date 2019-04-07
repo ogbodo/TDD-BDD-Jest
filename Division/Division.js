@@ -15,7 +15,7 @@ module.exports = function(a, b) {
       return "All Parameters should be number";
     }
     if (a == 0) {
-      return a / b;
+      return parseFloat((a / b).toFixed(4));
     } else {
       return "Denominator cannot be zero";
     }
@@ -24,5 +24,5 @@ module.exports = function(a, b) {
   if (typeof a !== "number" || typeof b !== "number") {
     return "All Parameters should be number";
   }
-  return a / b;
+  return parseFloat((a / b).toFixed(4));
 };
