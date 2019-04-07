@@ -6,6 +6,10 @@ module.exports = function() {
   for (var i = 0; i < arguments.length; i++) {
     if (isArray(arguments[i])) {
       sum += sumArrayValues(arguments[i]);
+    } else if (typeof arguments[i] === "object" && arguments[i] !== null) {
+      for (var index in arguments[i]) {
+        sum += arguments[index];
+      }
     } else {
       sum += arguments[i];
     }
