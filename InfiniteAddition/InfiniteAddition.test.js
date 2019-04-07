@@ -21,3 +21,6 @@ test("One argument is multidimensional array", () => {
     indefiniteAdd([2, [3, [1, 4, 50]], [2, 4, [1, [3, 4, 5]]]], 2, 4, 9, 0)
   ).toBe(94);
 });
+test("One argument is an object", () => {
+  expect(indefiniteAdd({}, 2, 4, 9, 0)).toBe(15);
+});
