@@ -11,3 +11,6 @@ test("One argument ", () => {
 test("One argument is array of number", () => {
   expect(indefiniteMultiply([2, 3, 1], 2, 1, 1, 2)).toBe(24);
 });
+test("One argument is empty array", () => {
+  expect(indefiniteMultiply([], 2, 4, 8, 1)).toBe(64);
+});
