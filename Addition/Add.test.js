@@ -26,3 +26,6 @@ test("All arguments not number", () => {
 test("More arguments than expected", () => {
   expect(add(8, 4, 5)).toBe("More arguments than expected");
 });
+test("adds 0.1 + 0.2 to equals 0.3", () => {
+  expect(add(0.1, 0.2)).toBe(0.3);
+});
