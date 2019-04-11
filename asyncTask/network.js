@@ -1,4 +1,4 @@
-const axios = require("./__mocks__/axios");
+const axios = require("axios");
 const fetchUserRepo = function(username) {
   return axios
     .get(username)
