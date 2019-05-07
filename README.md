@@ -19,4 +19,4 @@ Major steps taken to accomplish this solution
 3. Go to the package.json and edit scripts part replace its content to ‘jest’. This ensures that jest is used for the testing.
 4. Started writing the tests for a solution.
 5. Started writing the implementations for the tests I have written in step 3.
-6. To run the test type npm run test on the command line.
+6. To run the test type ```npm run test``` on the command line.
