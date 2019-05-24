@@ -1,8 +1,6 @@
 *.txt
 .DS_Store
 node_modules
-package-lock.json
-package.json
 babel.config.js
 coverage/
 github.js
