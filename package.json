@@ -1,0 +1,30 @@
+{
+  "name": "TDD_exercise",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ogbodo/TDD-Jest.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ogbodo/TDD-Jest/issues"
+  },
+  "homepage": "https://github.com/ogbodo/TDD-Jest#readme",
+  "dependencies": {
+    "babel-jest": "^24.7.1",
+    "github-api": "^3.0.0",
+    "jest": "^24.7.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3"
+  }
+}
